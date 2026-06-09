@@ -1,0 +1,190 @@
+/* Material UI inspired styling for password generator */
+:root {
+  --mui-bg: #f4f6f8;
+  --mui-surface: #ffffff;
+  --mui-primary: #1976d2;
+  --mui-primary-dark: #115293;
+  --mui-text: #1d1d1d;
+  --mui-muted: #6f7d8d;
+  --mui-border: rgba(0, 0, 0, 0.12);
+  --mui-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  background-color: var(--mui-bg);
+  color: var(--mui-text);
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+}
+
+.app {
+  width: min(560px, 100%);
+  background: var(--mui-surface);
+  border-radius: 26px;
+  border: 1px solid var(--mui-border);
+  box-shadow: var(--mui-shadow);
+  padding: 32px;
+  text-align: center;
+}
+
+.app h1 {
+  margin: 0 0 12px;
+  font-size: 1.9rem;
+  font-weight: 600;
+}
+
+.app p {
+  margin: 0 0 24px;
+  color: var(--mui-muted);
+  line-height: 1.6;
+}
+
+.password-card {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+  background: #fafbfc;
+  border: 1px solid var(--mui-border);
+  border-radius: 20px;
+  margin-bottom: 24px;
+}
+
+.generated-password {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 20px;
+  background: #ffffff;
+  border: 1px solid rgba(25, 118, 210, 0.16);
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--mui-text);
+}
+
+.generated-password span {
+  overflow-wrap: anywhere;
+}
+
+.copy-btn {
+  background: var(--mui-primary);
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.copy-btn:hover {
+  background: var(--mui-primary-dark);
+  transform: translateY(-1px);
+}
+
+.controls {
+  display: grid;
+  gap: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+}
+
+.field label {
+  color: var(--mui-muted);
+  font-size: 0.95rem;
+}
+
+.field input[type="range"] {
+  width: 100%;
+}
+
+.field input[type="number"],
+.field input[type="text"],
+.field select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 12px;
+  border: 1px solid var(--mui-border);
+  background: #fff;
+  color: var(--mui-text);
+}
+
+.checkbox-group {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  background: #f8fafc;
+  border: 1px solid var(--mui-border);
+  border-radius: 16px;
+}
+
+.checkbox-group label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--mui-text);
+}
+
+.checkbox-group input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+.generate-btn {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 14px;
+  background: var(--mui-primary);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.generate-btn:hover {
+  background: var(--mui-primary-dark);
+  box-shadow: 0 8px 20px rgba(25, 118, 210, 0.24);
+}
+
+.status-text {
+  margin-top: -8px;
+  color: var(--mui-muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 520px) {
+  .app {
+    padding: 24px 18px;
+  }
+
+  .generated-password {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .copy-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "pass-gen",
+  "version": "1.0.0",
+  "description": "password generator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "moreHOPE",
+  "license": "ISC",
+  "dependencies": {
+    "clipboard-copy": "^4.0.1",
+    "clipboardy": "^4.0.0",
+    "password-generator": "^2.3.2",
+    "secure-password-gen": "^1.0.8"
+  }
+}
